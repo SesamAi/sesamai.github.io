@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,400;0,6..72,600;0,6..72,800;1,6..72,400&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-fixed": "#65180a",
+                        "inverse-surface": "#0f0e0d",
+                        "tertiary-fixed": "#ff8eac",
+                        "secondary": "#9a3f2d",
+                        "primary-container": "#ff7859",
+                        "inverse-primary": "#fe5d39",
+                        "outline-variant": "#b1acaa",
+                        "secondary-container": "#ffc4b8",
+                        "primary-fixed": "#ff7859",
+                        "tertiary-fixed-dim": "#ff769e",
+                        "on-tertiary-container": "#66002d",
+                        "on-primary-fixed": "#000000",
+                        "inverse-on-surface": "#a09c9a",
+                        "background": "#fbf5f3",
+                        "surface-tint": "#b02604",
+                        "surface-variant": "#e2dcd9",
+                        "tertiary": "#b60055",
+                        "on-secondary-container": "#7f2b1b",
+                        "surface-container-high": "#e7e1df",
+                        "on-background": "#302e2d",
+                        "error": "#b41340",
+                        "on-error-container": "#510017",
+                        "error-dim": "#a70138",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffeff1",
+                        "primary-dim": "#9b1e00",
+                        "surface-container-highest": "#e2dcd9",
+                        "error-container": "#f74b6d",
+                        "on-primary": "#ffefec",
+                        "on-surface": "#302e2d",
+                        "surface-container": "#ede7e5",
+                        "on-secondary": "#ffefec",
+                        "tertiary-dim": "#a0004a",
+                        "tertiary-container": "#ff8eac",
+                        "primary-fixed-dim": "#fe5d39",
+                        "on-surface-variant": "#5e5b5a",
+                        "on-primary-fixed-variant": "#5b0d00",
+                        "on-secondary-fixed-variant": "#8c3423",
+                        "primary": "#b02604",
+                        "surface": "#fbf5f3",
+                        "surface-bright": "#fbf5f3",
+                        "on-tertiary-fixed-variant": "#760035",
+                        "secondary-fixed-dim": "#ffb0a0",
+                        "on-primary-container": "#4a0900",
+                        "outline": "#7a7675",
+                        "surface-container-low": "#f5efed",
+                        "on-tertiary-fixed": "#380015",
+                        "surface-dim": "#d9d3d1",
+                        "secondary-dim": "#8a3322",
+                        "secondary-fixed": "#ffc4b8",
+                        "on-error": "#ffefef"
+                    },
+                    fontFamily: {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fbf5f3;
+            color: #302e2d;
+        }
+
+        h1,
+        h2,
+        h3,
+        .font-serif {
+            font-family: 'Newsreader', serif;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #b02604, #b60055);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background selection:bg-primary-container selection:text-on-primary-container">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-zinc-900/70 backdrop-blur-xl">
+        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+            <div class="text-2xl font-serif italic text-orange-600 dark:text-orange-400">CuratorDev</div>
+            <div class="hidden md:flex items-center space-x-8">
+                <a class="text-zinc-600 dark:text-zinc-400 hover:text-orange-500 transition-colors font-medium"
+                    href="index.html">Services</a>
+                <a class="text-zinc-600 dark:text-zinc-400 hover:text-orange-500 transition-colors font-medium"
+                    href="web3.html">Web3</a>
+                <a class="text-zinc-600 dark:text-zinc-400 hover:text-orange-500 transition-colors font-medium"
+                    href="#">About</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button
+                    class="hidden lg:block text-zinc-600 font-medium hover:text-primary transition-colors px-4 py-2">Login</button>
+                <button
+                    class="bg-primary text-on-primary rounded-full px-6 py-2.5 font-medium shadow-xl shadow-primary/10 hover:shadow-primary/20 transition-all active:scale-95 duration-200">Start
+                    Project</button>
+            </div>
+        </div>
+    </nav>
+    <main class="pt-32 pb-24">
+        <!-- Hero Section -->
+        <section class="max-w-7xl mx-auto px-8 mb-32">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="relative z-10">
+                    <span
+                        class="inline-block px-4 py-1.5 rounded-full bg-tertiary-container text-on-tertiary-container text-xs font-semibold tracking-wider uppercase mb-6">Sesam
+                        Agency | Web3 Division</span>
+                    <h1 class="text-7xl lg:text-8xl font-headline font-normal leading-[1.1] mb-8 tracking-tight">
+                        Architecting the <span class="italic text-gradient">Decentralized</span> Future.
+                    </h1>
+                    <p class="text-xl text-on-surface-variant font-body max-w-lg mb-10 leading-relaxed">
+                        We build high-performance Web3 infrastructure using Rust, delivering institutional-grade RPC
+                        nodes and decentralized applications for the next generation of finance.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="form.html"
+                            class="bg-primary text-on-primary rounded-full px-8 py-4 font-semibold text-lg hover:shadow-2xl hover:shadow-primary/30 transition-all">Let's
+                            talk</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -top-20 -right-20 w-96 h-96 bg-primary-container/20 rounded-full blur-[100px]">
+                    </div>
+                    <div
+                        class="absolute -bottom-20 -left-10 w-80 h-80 bg-tertiary-container/30 rounded-full blur-[80px]">
+                    </div>
+                    <div class="relative rounded-xl overflow-hidden shadow-2xl">
+                        <img alt="Blockchain visualization"
+                            class="w-full h-[600px] object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
+                            data-alt="Minimalist architectural view of clean white geometric structures with soft pink and orange sunset lighting hitting sharp angles"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8Mso7_jMY5WbAlLkZhBfiZoL_X6akrpu6tgki00oU3X1UUxZihJ6Z8BTUulhXsHEAG2Ouxbz42OLJyevfwoz_X_0af01lTAdiZo3yvF_ri3GegL05thgXCFy7K4SCdprxnpihXE5ghrk5Eekz70k_wGAFodIjnEUKiBhNYGd1X8JgtMl42NykhyvlQk1MUIlDz-egvZSbeyYcEoqJq3KlAfTmQzj3RTp4fTDuc-uMCD7DLXdD0zic4eApSzwM8pANrVVmr6uh4e_9" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Technical Pillars - Asymmetric Bento Grid -->
+        <section class="max-w-7xl mx-auto px-8 mb-40">
+            <div class="mb-16">
+                <h2 class="text-5xl font-headline mb-4">Core Technical <span class="italic">Pillars</span></h2>
+                <div class="h-1 w-24 bg-primary rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 h-auto lg:h-[700px]">
+                <!-- Rust Development -->
+                <div class="md:col-span-7 bg-surface-container-low rounded-lg p-12 relative overflow-hidden group">
+                    <div class="relative z-10 h-full flex flex-col">
+                        <span class="material-symbols-outlined text-5xl text-primary mb-8"
+                            data-icon="terminal">terminal</span>
+                        <h3 class="text-4xl font-headline mb-6">Rust-Powered Efficiency</h3>
+                        <p class="text-lg text-on-surface-variant max-w-md mb-8 leading-relaxed">
+                            Memory safety without a garbage collector. We leverage Rust to build high-concurrency
+                            protocols and smart contracts that are both performant and secure.
+                        </p>
+                        <div class="mt-auto flex flex-wrap gap-3">
+                            <span
+                                class="px-4 py-1.5 rounded-full bg-white text-xs font-medium text-on-surface shadow-sm">Memory
+                                Safety</span>
+                            <span
+                                class="px-4 py-1.5 rounded-full bg-white text-xs font-medium text-on-surface shadow-sm">Zero-Cost
+                                Abstractions</span>
+                            <span
+                                class="px-4 py-1.5 rounded-full bg-white text-xs font-medium text-on-surface shadow-sm">Parallelism</span>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute right-0 bottom-0 w-1/2 h-full opacity-10 group-hover:opacity-20 transition-opacity">
+                        <img alt="Code on screen" class="w-full h-full object-cover"
+                            data-alt="Close up of clean programming code on a monitor with soft ambient orange studio lighting reflected on glass"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDExv1GtUm0f0GXbOTEGt8m_wBj3AHxnoiEFoVI9zYSpPq1dTDz4HwC6EKXu438sScB0FDMgysDpnyqGEBjVolexEo85gY_E6F5godIXBi4iR_2Nxy3scx7bBAD93z9QN3G5gi2k9LZOWg8eggxBKE9SS22REZKDiRNNwpmat9v1t_Y1vzwKqxJFag3VkJNEEg7C1PiirKqhHTryV08_YvKIkyQddAsIpA5thKjQyeMlRoFhf6BNMl2KrypN8mC8m0pnnfnzJooiHbi" />
+                    </div>
+                </div>
+                <!-- RPC Infra -->
+                <div
+                    class="md:col-span-5 glass-panel border border-primary/5 rounded-lg p-10 flex flex-col justify-between group hover:bg-white/60 transition-all">
+                    <div>
+                        <span class="material-symbols-outlined text-4xl text-tertiary mb-6" data-icon="dns">dns</span>
+                        <h3 class="text-3xl font-headline mb-4">RPC Infrastructure</h3>
+                        <p class="text-on-surface-variant leading-relaxed">
+                            Low-latency, high-availability endpoints for Solana, Ethereum, and Polkadot. Managed node
+                            services with 99.9% uptime.
+                        </p>
+                    </div>
+                    <div class="mt-8 space-y-4">
+                        <div class="flex items-center justify-between p-4 bg-white/50 rounded-lg">
+                            <span class="font-medium text-sm">Response Time</span>
+                            <span class="text-primary font-bold">12ms</span>
+                        </div>
+                        <div class="flex items-center justify-between p-4 bg-white/50 rounded-lg">
+                            <span class="font-medium text-sm">Availability</span>
+                            <span class="text-tertiary font-bold">99.99%</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- dApps -->
+                <div
+                    class="md:col-span-5 glass-panel border border-primary/5 rounded-lg p-10 flex flex-col justify-center text-center items-center group">
+                    <div
+                        class="w-20 h-20 bg-primary-container/20 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-4xl text-primary"
+                            data-icon="auto_awesome_motion">auto_awesome_motion</span>
+                    </div>
+                    <h3 class="text-3xl font-headline mb-4">Decentralized Apps</h3>
+                    <p class="text-on-surface-variant mb-6">
+                        Custom UI/UX for DeFi protocols, NFT marketplaces, and DAO governance tools.
+                    </p>
+                    <a class="text-primary font-semibold flex items-center gap-2 hover:gap-4 transition-all" href="#">
+                        Explore Portfolio <span class="material-symbols-outlined text-sm"
+                            data-icon="arrow_forward">arrow_forward</span>
+                    </a>
+                </div>
+                <!-- Interactive Stats/Success -->
+                <div class="md:col-span-7 bg-on-background text-surface rounded-lg p-12 overflow-hidden relative">
+                    <div class="grid grid-cols-2 gap-12 relative z-10">
+                        <div>
+                            <div class="text-5xl font-headline text-primary-container mb-2">$4.2B+</div>
+                            <div class="text-surface-variant text-sm tracking-widest uppercase">TVL Secured</div>
+                        </div>
+                        <div>
+                            <div class="text-5xl font-headline text-tertiary-fixed mb-2">150+</div>
+                            <div class="text-surface-variant text-sm tracking-widest uppercase">Smart Contracts</div>
+                        </div>
+                        <div class="col-span-2 mt-8">
+                            <p class="text-xl font-headline italic opacity-80">"The architecture Sesam provided for our
+                                mainnet launch was flawless. Their Rust expertise is unmatched in the EU market."</p>
+                            <div class="mt-4 text-sm font-body">— CTO, Nexus Protocol</div>
+                        </div>
+                    </div>
+                    <!-- Decorative background element -->
+                    <div
+                        class="absolute -right-20 -bottom-20 w-80 h-80 bg-gradient-to-tr from-primary/20 to-tertiary/20 rounded-full blur-3xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Detailed Service Stack -->
+        <section class="max-w-7xl mx-auto px-8 mb-40">
+            <div class="bg-surface-container-low rounded-xl p-16">
+                <div class="max-w-3xl mb-16">
+                    <h2 class="text-5xl font-headline mb-6">Engineered for <span class="italic">Scale</span></h2>
+                    <p class="text-lg text-on-surface-variant">Our development lifecycle integrates rigorous security
+                        audits and gas optimization strategies to ensure your protocol stays lean and secure.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-12">
+                    <div class="space-y-6">
+                        <div class="h-px w-full bg-outline-variant/30"></div>
+                        <h4 class="text-xl font-semibold flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-primary"></span>
+                            Protocol Design
+                        </h4>
+                        <p class="text-on-surface-variant leading-relaxed">Economic modeling, tokenomics consulting, and
+                            whitepaper architecture for sustainable growth.</p>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="h-px w-full bg-outline-variant/30"></div>
+                        <h4 class="text-xl font-semibold flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-tertiary"></span>
+                            Security Audits
+                        </h4>
+                        <p class="text-on-surface-variant leading-relaxed">Comprehensive vulnerability scanning and
+                            formal verification of complex smart contract logic.</p>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="h-px w-full bg-outline-variant/30"></div>
+                        <h4 class="text-xl font-semibold flex items-center gap-3">
+                            <span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                            Cross-Chain Bridges
+                        </h4>
+                        <p class="text-on-surface-variant leading-relaxed">Interoperability solutions connecting
+                            heterogeneous networks with minimal latency.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA Section -->
+        <section class="max-w-7xl mx-auto px-8">
+            <div class="relative rounded-xl overflow-hidden bg-on-background py-24 px-12 text-center">
+                <div class="absolute inset-0 opacity-20 pointer-events-none">
+                    <img alt="Global network" class="w-full h-full object-cover"
+                        data-alt="Abstract deep space network of connected glowing dots and lines with a subtle soft pink and orange color bleed"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkn64FZyMlCfHgnZnbLLPtC5E3CbPVFfXlzZhh-v5zgOPsbJKBrkdGUND9LRA9ezkH4jKj_pLGpaipYW40fyb6OaiA-7oFPZEi-w4tOyCOxYnGorx-XOVS7TuvZb-al4hnhgJwLpA4yaMROX4dJHlwiffLcw0Ld7F2RzDshpd2sDmHUIdN1RsCzdPirV0Jajk9rRfM4vfZO_hFXuSO1N8_QsjoR3w92TSeTjZeLWh-jkx3fne15WJ2zyYawM1YqenXdBxK20XmL8Yu" />
+                </div>
+                <div class="relative z-10 max-w-2xl mx-auto">
+                    <h2 class="text-5xl font-headline text-white mb-8">Ready to build the <span
+                            class="italic text-primary-container">Next Big Thing?</span></h2>
+                    <p class="text-surface-variant text-lg mb-10">Schedule a direct technical deep-dive with our
+                        founding engineers. No sales fluff, just architecture.</p>
+                    <a href="form.html"
+                        class="bg-primary text-on-primary rounded-full px-10 py-5 font-bold text-xl hover:scale-105 transition-all">Book
+                        Discovery Call</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-zinc-50 dark:bg-zinc-950 w-full py-12 px-8">
+        <div
+            class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto border-t border-zinc-200/50 dark:border-zinc-800/50 pt-12">
+            <div class="col-span-1">
+                <div class="text-lg font-serif italic text-zinc-900 dark:text-zinc-100 mb-4">CuratorDev</div>
+                <p class="text-zinc-500 font-sans text-sm leading-relaxed">
+                    Engineering the future of the open web through precision Rust development and architectural
+                    excellence.
+                </p>
+            </div>
+            <div>
+                <h5 class="font-semibold text-sm mb-4 uppercase tracking-wider text-zinc-400">Navigation</h5>
+                <ul class="space-y-2">
+                    <li><a class="text-zinc-500 hover:text-orange-500 font-sans text-sm underline decoration-orange-500/30 underline-offset-4"
+                            href="#">Services</a></li>
+                    <li><a class="text-orange-600 font-medium font-sans text-sm underline decoration-orange-500/30 underline-offset-4"
+                            href="#">Web3</a></li>
+                    <li><a class="text-zinc-500 hover:text-orange-500 font-sans text-sm underline decoration-orange-500/30 underline-offset-4"
+                            href="#">Case Studies</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-semibold text-sm mb-4 uppercase tracking-wider text-zinc-400">Resources</h5>
+                <ul class="space-y-2">
+                    <li><a class="text-zinc-500 hover:text-orange-500 font-sans text-sm underline decoration-orange-500/30 underline-offset-4"
+                            href="#">Github</a></li>
+                    <li><a class="text-zinc-500 hover:text-orange-500 font-sans text-sm underline decoration-orange-500/30 underline-offset-4"
+                            href="#">LinkedIn</a></li>
+                    <li><a class="text-zinc-500 hover:text-orange-500 font-sans text-sm underline decoration-orange-500/30 underline-offset-4"
+                            href="#">API Docs</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-semibold text-sm mb-4 uppercase tracking-wider text-zinc-400">Legal</h5>
+                <ul class="space-y-2">
+                    <li><a class="text-zinc-500 hover:text-orange-500 font-sans text-sm underline decoration-orange-500/30 underline-offset-4"
+                            href="#">Privacy</a></li>
+                    <li><a class="text-zinc-500 hover:text-orange-500 font-sans text-sm underline decoration-orange-500/30 underline-offset-4"
+                            href="#">Terms</a></li>
+                </ul>
+                <div class="mt-8 text-zinc-400 font-sans text-xs">
+                    © 2024 CuratorDev Agency. Built with Precision.
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
