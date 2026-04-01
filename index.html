@@ -71,7 +71,22 @@
             "surface-dim": "#d9d3d1",
             "secondary-dim": "#8a3322",
             "secondary-fixed": "#ffc4b8",
-            "on-error": "#ffefec"
+            "on-error": "#ffefec",
+            "primary": "#FF5E3A",
+            "primary-container": "#FFDED7",
+            "on-primary": "#FFFFFF",
+            "on-primary-container": "#410D00",
+            "secondary": "#302E2D",
+            "on-secondary": "#FFFFFF",
+            "background": "#FBF5F3",
+            "surface": "#FBF5F3",
+            "on-surface": "#302E2D",
+            "on-surface-variant": "#5E5B5A",
+            "outline": "#7A7675",
+            "outline-variant": "#B1ACAA",
+            "surface-container": "#EDE7E5",
+            "surface-container-low": "#F5EFED",
+            "surface-container-high": "#E7E1DF"
           },
           fontFamily: {
             "headline": ["Newsreader", "serif"],
@@ -111,6 +126,48 @@
     .material-symbols-outlined {
       font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
     }
+
+    .editorial-gradient {
+      background: linear-gradient(135deg, #FF5E3A 0%, #FF8E76 100%);
+    }
+
+    body {
+      background-color: #fbf5f3;
+      color: #302e2d;
+      font-family: 'Inter', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    .serif-text {
+      font-family: 'Newsreader', serif;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .service-card {
+      background: #1A1817;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .mesh-bg {
+      background-image: radial-gradient(#FF5E3A 0.5px, transparent 0.5px);
+      background-size: 24px 24px;
+    }
   </style>
 </head>
 
@@ -136,177 +193,507 @@
     </div>
   </nav>
   <main class="pt-32 pb-24">
-    <!-- Hero Section -->
+
     <section class="max-w-7xl mx-auto px-8 mb-24">
-      <div class="flex flex-col md:flex-row items-end gap-12">
+      <div class="flex flex-col md:flex-row items-end gap-12 mb-20">
         <div class="md:w-2/3">
           <span
-            class="inline-block bg-tertiary-container text-on-tertiary-container px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase mb-6">Our
-            Expertise</span>
+            class="inline-block bg-primary-container text-on-primary-container px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase mb-6">Our
+            Services</span>
           <h1 class="text-6xl md:text-8xl leading-[1.1] mb-8">
-            Architecture for the <span class="italic font-light">modern digital</span> landscape.
+            What are we <span class="italic font-light">building?</span>
           </h1>
           <p class="text-xl md:text-2xl text-on-surface-variant max-w-2xl font-light leading-relaxed">
-            At Sesam Agency, we blend technical precision with editorial flair to build products that command attention
-            and drive performance.
+            Select the specialized services tailored for your next digital breakthrough.
           </p>
         </div>
         <div class="md:w-1/3 flex justify-end">
-          <div class="w-full aspect-square rounded-xl overflow-hidden shadow-2xl rotate-3 bg-surface-container-low p-2">
-            <img class="w-full h-full object-cover rounded-lg"
-              data-alt="Modern minimalist office space with warm wooden textures, soft morning sunlight, and clean architectural lines reflecting professionalism and calm."
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw_DzwN5Fb990qdiE_nSzBw7EooGSNTEuK37-9oyzrVwPE7mahbarUOcdXFV6GF3eai9l-03RuPclwQm1XC7wujedc3ykb7eAdJtS0CaUkPuGUpHzD-LvZ29Jb4AMCfn88TIXjHlNcyZtj-bi259zYvE4mRQajmtjT4eCD8j6HJw8WoOPDEMEUAnlYKopzqWaPXJYB99wOKLCDkvclv2IyjOQGqHYWfrCbLYNIaJvnpsZdIPnJ5J6cNrLtdOyKi_J345czdwFuqyCq" />
+          <div
+            class="w-full aspect-square rounded-full overflow-hidden shadow-2xl rotate-3 bg-surface-container-low p-2">
+            <img alt="Modern minimalist architecture" class="w-full h-full object-cover rounded-full"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuACRlVDI05r_cSgciKEStr4X_XeCkEPl1eKsu8tTxqPvILXwzPcyh-ODFfTw8FaTaOUQ6s26G2p9HYxVp-9g4t6h5tB0slT3fyfr-188aQD44wDfIf_Ft2_zF9A3Gs6pgRhBsS1q9-0iIQNI95RI7fpQWaYnlf5xOp8DLfbfc53K18GUT2vksjmSdS8-RGMT3xWqU2rbgCDcO-AGu76NnPNhGbQ95oI6sPy8YFpSfSj7dWoxRwDZaFx73cX2o-Ei1fcwRT-DXthdWAa" />
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- 1. Design & UX -->
+        <a class="service-card p-10 rounded-xl flex flex-col h-full text-white" href="#design-ux">
+          <div class="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center text-primary mb-10">
+            <span class="material-symbols-outlined text-3xl">palette</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 font-headline">Design &amp; UX</h3>
+          <p class="text-zinc-400 mb-8 flex-grow leading-relaxed">
+            UI/UX, Brand Identity, and Creative Direction. We craft digital experiences that resonate.
+          </p>
+          <div class="text-primary font-bold inline-flex items-center group">
+            Select <span
+              class="material-symbols-outlined ml-1 text-sm transition-transform group-hover:translate-x-1">chevron_right</span>
+          </div>
+        </a>
+        <!-- 2. Development -->
+        <a class="service-card p-10 rounded-xl flex flex-col h-full text-white" href="#robust-dev">
+          <div class="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center text-primary mb-10">
+            <span class="material-symbols-outlined text-3xl">terminal</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 font-headline">Development</h3>
+          <p class="text-zinc-400 mb-8 flex-grow leading-relaxed">
+            Full-stack apps, SaaS, and custom architectures. Expertise in WordPress, React, and Node.js.
+          </p>
+          <div class="text-primary font-bold inline-flex items-center group">
+            Select <span
+              class="material-symbols-outlined ml-1 text-sm transition-transform group-hover:translate-x-1">chevron_right</span>
+          </div>
+        </a>
+        <!-- 3. Hosting -->
+        <a class="service-card p-10 rounded-xl flex flex-col h-full text-white" href="#hosting">
+          <div class="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center text-primary mb-10">
+            <span class="material-symbols-outlined text-3xl">cloud</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 font-headline">Hosting</h3>
+          <p class="text-zinc-400 mb-8 flex-grow leading-relaxed">
+            Reliable infrastructure, seamless deployment, and automated scaling for global availability.
+          </p>
+          <div class="text-primary font-bold inline-flex items-center group">
+            Select <span
+              class="material-symbols-outlined ml-1 text-sm transition-transform group-hover:translate-x-1">chevron_right</span>
+          </div>
+        </a>
+        <!-- 4. Monitoring -->
+        <a class="service-card p-10 rounded-xl flex flex-col h-full text-white" href="#monitoring">
+          <div class="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center text-primary mb-10">
+            <span class="material-symbols-outlined text-3xl">analytics</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 font-headline">Monitoring</h3>
+          <p class="text-zinc-400 mb-8 flex-grow leading-relaxed">
+            Uptime tracking, performance analytics, and proactive alerts to keep your business running.
+          </p>
+          <div class="text-primary font-bold inline-flex items-center group">
+            Select <span
+              class="material-symbols-outlined ml-1 text-sm transition-transform group-hover:translate-x-1">chevron_right</span>
+          </div>
+        </a>
+        <!-- 5. Blockchain & Web3 -->
+        <a class="service-card p-10 rounded-xl flex flex-col h-full text-white" href="#blockchain">
+          <div class="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center text-primary mb-10">
+            <span class="material-symbols-outlined text-3xl">currency_bitcoin</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 font-headline">Blockchain &amp; Web3</h3>
+          <p class="text-zinc-400 mb-8 flex-grow leading-relaxed">
+            Web3 ecosystems, dApps, and audited smart contracts for the decentralized future.
+          </p>
+          <div class="text-primary font-bold inline-flex items-center group">
+            Select <span
+              class="material-symbols-outlined ml-1 text-sm transition-transform group-hover:translate-x-1">chevron_right</span>
+          </div>
+        </a>
+        <!-- 6. Database Management -->
+        <a class="service-card p-10 rounded-xl flex flex-col h-full text-white" href="#database">
+          <div class="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center text-primary mb-10">
+            <span class="material-symbols-outlined text-3xl">database</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 font-headline">Database Management</h3>
+          <p class="text-zinc-400 mb-8 flex-grow leading-relaxed">
+            Secure, scalable data architectures designed for performance and integrity.
+          </p>
+          <div class="text-primary font-bold inline-flex items-center group">
+            Select <span
+              class="material-symbols-outlined ml-1 text-sm transition-transform group-hover:translate-x-1">chevron_right</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Services Bento Grid -->
+    <section class="bg-surface-container-low py-32 overflow-hidden" id="design-ux">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+          <div class="lg:w-1/2 relative">
+            <div class="rounded-xl overflow-hidden shadow-2xl relative z-10">
+              <img alt="Designer sketching interfaces"
+                class="w-full h-[500px] object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA50XA2Cluvy6BiIdSnsQPxHtEwL5tXwABfKaDbbiEKcknjFi5oS-QOWVlBCP9qpQS-lfMXEO3z82RrLb3q4JiYMrjhAOCHOk-Sfhd-FDPOa6jslmN6dN6NaeiQeeV-wQaZJWlBXFaQj1AOY0oKq-_EsggpZrcFZey4Z4n1ouoS-Qq80N5fE1W4TjB-B_GFgXLRQUnf5nw3WfSSf7VtSIHPyqGQ45J69fPiyaj-o81hiwS1CpGoKBxFKD1eIJNPix8snLIlQ3a1npQU" />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-12">
+                <h2 class="text-white text-5xl font-serif mb-4">Design &amp; UX</h2>
+                <p class="text-white/80 text-lg max-w-sm">Creating interfaces that feel as good as they
+                  look. We prioritize clarity, intent, and emotional resonance.</p>
+              </div>
+            </div>
+            <div class="absolute -top-10 -left-10 w-40 h-40 editorial-gradient rounded-full blur-3xl opacity-20">
+            </div>
+          </div>
+          <div class="lg:w-1/2 space-y-12">
+            <div class="flex gap-6 items-start">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <span class="material-symbols-outlined text-primary">edit</span>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold mb-2">Visual Identity</h4>
+                <p class="text-on-surface-variant leading-relaxed">Defining your digital soul through
+                  color, type, and form. Consistent branding across every touchpoint.</p>
+              </div>
+            </div>
+            <div class="flex gap-6 items-start">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <span class="material-symbols-outlined text-primary">gesture</span>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold mb-2">Interactive Prototypes</h4>
+                <p class="text-on-surface-variant leading-relaxed">Feeling the flow before a single line
+                  of code is written. High-fidelity motion studies for stakeholder alignment.</p>
+              </div>
+            </div>
+            <div class="flex gap-6 items-start">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <span class="material-symbols-outlined text-primary">psychology</span>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold mb-2">Cognitive UX</h4>
+                <p class="text-on-surface-variant leading-relaxed">Reducing friction through
+                  evidence-based user journey design. Behavior analysis meets artistic intuition.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- Services Bento Grid -->
-    <section class="max-w-7xl mx-auto px-8 space-y-24">
-      <!-- Design & UX Section -->
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
-        <div class="md:col-span-7 rounded-lg overflow-hidden relative group h-[450px]">
-          <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
-            data-alt="Close up of a designer sketching on a tablet, clean desk with soft shadows and a focused, creative atmosphere."
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuABytU178byBSNXg4o9yqFO8ltgYxiBS9G-qkrYfLUr-ayqFnQiBpPMkfHH8DqVX71Lo2vbEcqH_vP7bmoXeFQKjLKC0zRpgN1o_os01JGPYZBlqVIcDLWdk5TyWWcyvS96wkpIGWhDflfs3avA7Po-1a6J50RTQY3ZMLRPyBvnbwTw6owlDTHb8JRVKneHnPkxGWXhHxY6AyweAErUUFRA7GkUXah5lOfr-Lhpkxi59GAhuKmF8-SzfOIOBg_wxts8Sv_CXxJ7mcMV" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-          <div class="absolute bottom-10 left-10 text-white">
-            <h2 class="text-5xl font-serif mb-4">Design &amp; UX</h2>
-            <p class="max-w-md opacity-90 text-lg">Creating interfaces that feel as good as they look. We prioritize
-              clarity, intent, and emotional resonance.</p>
+    <!-- Detailed Section: Robust Development -->
+    <section class="max-w-7xl mx-auto px-8 py-12" id="robust-dev">
+      <div class="mb-16 text-center max-w-3xl mx-auto">
+        <span class="text-primary font-bold tracking-widest uppercase text-xs mb-4 block">Full Stack
+          Prowess</span>
+        <h2 class="text-5xl md:text-6xl font-serif mb-6">Robust Development</h2>
+        <p class="text-on-surface-variant text-lg">We build scalable engines that power the next generation of
+          digital commerce and communication.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Python -->
+        <div
+          class="glass-card p-8 rounded-xl border border-outline-variant/30 hover:border-primary/50 transition-colors">
+          <div class="w-10 h-10 rounded-full editorial-gradient flex items-center justify-center text-white mb-6">
+            <span class="material-symbols-outlined text-xl">code</span>
+          </div>
+          <h4 class="text-xl font-bold mb-3 font-headline">Python &amp; FastAPI</h4>
+          <p class="text-sm text-on-surface-variant mb-6 leading-relaxed">High-performance APIs designed for
+            machine learning integration and rapid scalability.</p>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="px-2 py-1 bg-surface-container-high rounded-full text-[10px] font-bold uppercase tracking-wider">AI
+              Ready</span>
+            <span
+              class="px-2 py-1 bg-surface-container-high rounded-full text-[10px] font-bold uppercase tracking-wider">Asynchronous</span>
           </div>
         </div>
-        <div class="md:col-span-5 glass-card p-12 flex flex-col justify-center space-y-8">
-          <div class="space-y-6">
-            <div class="flex gap-4 items-start">
-              <span class="material-symbols-outlined text-primary text-3xl">brush</span>
-              <div>
-                <h3 class="text-xl font-bold mb-1">Visual Identity</h3>
-                <p class="text-on-surface-variant">Defining your digital soul through color, type, and form.</p>
+        <!-- Node.js -->
+        <div
+          class="glass-card p-8 rounded-xl border border-outline-variant/30 hover:border-primary/50 transition-colors">
+          <div class="w-10 h-10 rounded-full editorial-gradient flex items-center justify-center text-white mb-6">
+            <span class="material-symbols-outlined text-xl">javascript</span>
+          </div>
+          <h4 class="text-xl font-bold mb-3 font-headline">Node.js Ecosystem</h4>
+          <p class="text-sm text-on-surface-variant mb-6 leading-relaxed">Real-time applications built on
+            NestJS or Express, optimized for heavy I/O and low latency.</p>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="px-2 py-1 bg-surface-container-high rounded-full text-[10px] font-bold uppercase tracking-wider">TypeScript</span>
+            <span
+              class="px-2 py-1 bg-surface-container-high rounded-full text-[10px] font-bold uppercase tracking-wider">Real-time</span>
+          </div>
+        </div>
+        <!-- C# -->
+        <div
+          class="glass-card p-8 rounded-xl border border-outline-variant/30 hover:border-primary/50 transition-colors">
+          <div class="w-10 h-10 rounded-full editorial-gradient flex items-center justify-center text-white mb-6">
+            <span class="material-symbols-outlined text-xl">terminal</span>
+          </div>
+          <h4 class="text-xl font-bold mb-3 font-headline">C# / .NET</h4>
+          <p class="text-sm text-on-surface-variant mb-6 leading-relaxed">Enterprise-grade stability for
+            complex business logic and secure financial architectures.</p>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="px-2 py-1 bg-surface-container-high rounded-full text-[10px] font-bold uppercase tracking-wider">Cloud
+              Native</span>
+            <span
+              class="px-2 py-1 bg-surface-container-high rounded-full text-[10px] font-bold uppercase tracking-wider">Secured</span>
+          </div>
+        </div>
+        <!-- WordPress -->
+        <div
+          class="glass-card p-8 rounded-xl border border-outline-variant/30 hover:border-primary/50 transition-colors">
+          <div class="w-10 h-10 rounded-full editorial-gradient flex items-center justify-center text-white mb-6">
+            <span class="material-symbols-outlined text-xl">newspaper</span>
+          </div>
+          <h4 class="text-xl font-bold mb-3 font-headline">WordPress</h4>
+          <p class="text-sm text-on-surface-variant mb-6 leading-relaxed">Custom themes and headless CMS
+            solutions for content-heavy editorial experiences.</p>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="px-2 py-1 bg-surface-container-high rounded-full text-[10px] font-bold uppercase tracking-wider">Headless</span>
+            <span
+              class="px-2 py-1 bg-surface-container-high rounded-full text-[10px] font-bold uppercase tracking-wider">Tailored</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Detailed Section: Hosting -->
+    <section class="bg-surface-container-low py-32 overflow-hidden" id="hosting">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+          <div class="lg:w-1/3 order-1 lg:order-1">
+            <span class="text-primary font-bold tracking-widest uppercase text-xs mb-4 block">Infrastructure
+              Mastery</span>
+            <h2 class="text-5xl md:text-6xl font-serif mb-8 leading-tight">Superior <span class="italic">Hosting</span>
+            </h2>
+            <p class="text-on-surface-variant mb-10 leading-relaxed text-lg">Scalable infrastructure
+              designed for global reach. We ensure your application stays alive, fast, and secure under
+              any load.</p>
+            <div class="space-y-8">
+              <div class="flex items-center gap-6">
+                <div
+                  class="w-16 h-16 rounded-2xl bg-white flex items-center justify-center shadow-sm border border-outline-variant/20">
+                  <span class="material-symbols-outlined text-primary text-3xl">cloud_done</span>
+                </div>
+                <div>
+                  <h4 class="font-bold">Scalable Infrastructure</h4>
+                  <p class="text-sm text-on-surface-variant">Auto-scaling clusters that grow with your
+                    traffic.</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-6">
+                <div
+                  class="w-16 h-16 rounded-2xl bg-white flex items-center justify-center shadow-sm border border-outline-variant/20">
+                  <span class="material-symbols-outlined text-primary text-3xl">public</span>
+                </div>
+                <div>
+                  <h4 class="font-bold">Global Availability</h4>
+                  <p class="text-sm text-on-surface-variant">Multi-region deployments for ultra-low
+                    latency.</p>
+                </div>
               </div>
             </div>
-            <div class="flex gap-4 items-start">
-              <span class="material-symbols-outlined text-primary text-3xl">gesture</span>
-              <div>
-                <h3 class="text-xl font-bold mb-1">Interactive Prototypes</h3>
-                <p class="text-on-surface-variant">Feeling the flow before a single line of code is written.</p>
-              </div>
+          </div>
+          <div class="lg:w-2/3 order-2 lg:order-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div
+              class="bg-white p-16 rounded-full aspect-square flex flex-col items-center justify-center text-center shadow-xl shadow-primary/5 border border-primary/10 transition-transform hover:scale-105 duration-500">
+              <span class="text-6xl font-headline font-bold text-primary mb-2">99.99%</span>
+              <span class="text-sm uppercase tracking-widest font-bold text-on-surface-variant">Uptime
+                Guarantee</span>
             </div>
-            <div class="flex gap-4 items-start">
-              <span class="material-symbols-outlined text-primary text-3xl">psychology</span>
-              <div>
-                <h3 class="text-xl font-bold mb-1">Cognitive UX</h3>
-                <p class="text-on-surface-variant">Reducing friction through evidence-based user journey design.</p>
-              </div>
+            <div
+              class="bg-primary p-16 rounded-full aspect-square flex flex-col items-center justify-center text-center shadow-2xl shadow-primary/20 self-end transition-transform hover:scale-105 duration-500">
+              <span class="text-6xl font-headline font-bold text-white mb-2">24/7</span>
+              <span class="text-sm uppercase tracking-widest font-bold text-white/80">Active SRE
+                Support</span>
             </div>
           </div>
         </div>
       </div>
-      <!-- Development Section -->
-      <div class="bg-surface-container-low rounded-xl p-12 md:p-20 relative overflow-hidden">
-        <!-- Decorative element -->
-        <div class="absolute -top-24 -right-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
-        <div class="max-w-3xl mb-16">
-          <span class="text-primary font-bold tracking-widest text-sm uppercase">Full Stack Prowess</span>
-          <h2 class="text-5xl md:text-6xl mt-4 mb-6">Robust Development</h2>
-          <p class="text-xl text-on-surface-variant leading-relaxed">We build scalable engines that power the next
-            generation of digital commerce and communication.</p>
+    </section>
+    <!-- Detailed Section: Monitoring -->
+    <section class="max-w-7xl mx-auto px-8 py-32" id="monitoring">
+      <div class="flex flex-col lg:flex-row gap-16 items-center">
+        <div class="lg:w-1/2">
+          <div class="glass-card p-8 rounded-2xl border border-outline-variant/30 shadow-2xl relative overflow-hidden">
+            <div class="flex items-center justify-between mb-8">
+              <div class="flex items-center gap-3">
+                <div class="w-3 h-3 rounded-full bg-green-500 animate-pulse"></div>
+                <span class="text-xs font-bold uppercase tracking-wider opacity-60">System
+                  Healthy</span>
+              </div>
+              <span class="text-xs font-medium text-on-surface-variant">Last updated: 2m ago</span>
+            </div>
+            <div class="h-48 flex items-end gap-2 mb-6">
+              <div class="flex-1 bg-primary/10 h-[40%] rounded-t-lg hover:bg-primary/30 transition-colors">
+              </div>
+              <div class="flex-1 bg-primary/10 h-[60%] rounded-t-lg hover:bg-primary/30 transition-colors">
+              </div>
+              <div class="flex-1 bg-primary/20 h-[55%] rounded-t-lg hover:bg-primary/30 transition-colors">
+              </div>
+              <div class="flex-1 bg-primary/10 h-[80%] rounded-t-lg hover:bg-primary/30 transition-colors">
+              </div>
+              <div class="flex-1 bg-primary/40 h-[95%] rounded-t-lg hover:bg-primary/30 transition-colors">
+              </div>
+              <div class="flex-1 bg-primary/10 h-[70%] rounded-t-lg hover:bg-primary/30 transition-colors">
+              </div>
+              <div class="flex-1 bg-primary/10 h-[50%] rounded-t-lg hover:bg-primary/30 transition-colors">
+              </div>
+              <div class="flex-1 bg-primary/20 h-[65%] rounded-t-lg hover:bg-primary/30 transition-colors">
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="p-4 bg-surface-container rounded-xl">
+                <span class="text-[10px] uppercase font-bold text-on-surface-variant block mb-1">Response
+                  Time</span>
+                <span class="text-xl font-headline font-bold">124ms</span>
+              </div>
+              <div class="p-4 bg-surface-container rounded-xl">
+                <span class="text-[10px] uppercase font-bold text-on-surface-variant block mb-1">Error
+                  Rate</span>
+                <span class="text-xl font-headline font-bold">0.02%</span>
+              </div>
+            </div>
+            <div class="absolute -right-20 -bottom-20 w-64 h-64 editorial-gradient opacity-5 rounded-full blur-3xl">
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-1/2 space-y-10">
+          <div>
+            <span class="text-primary font-bold tracking-widest uppercase text-xs mb-4 block">Observability</span>
+            <h2 class="text-5xl font-serif mb-6 leading-tight">Monitoring &amp; <br /><span class="italic">Real-time
+                Analytics</span></h2>
+            <p class="text-on-surface-variant text-lg leading-relaxed">We don't wait for things to break.
+              Our monitoring stack provides granular visibility into every layer of your application,
+              ensuring proactive resolution before users notice.</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="space-y-3">
+              <span class="material-symbols-outlined text-primary">notifications_active</span>
+              <h4 class="font-bold">Proactive Alerts</h4>
+              <p class="text-sm text-on-surface-variant leading-relaxed">Instant notifications via Slack,
+                PagerDuty, or SMS for critical events.</p>
+            </div>
+            <div class="space-y-3">
+              <span class="material-symbols-outlined text-primary">insights</span>
+              <h4 class="font-bold">Deep Diagnostics</h4>
+              <p class="text-sm text-on-surface-variant leading-relaxed">Trace-level analysis to pinpoint
+                bottlenecks in distributed systems.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Detailed Section: Database Management -->
+    <section class="bg-surface-container-low py-32 border-y border-outline-variant/10" id="database">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="flex flex-col lg:flex-row-reverse items-center gap-16">
+          <div class="lg:w-1/2 space-y-10">
+            <div>
+              <span class="text-primary font-bold tracking-widest uppercase text-xs mb-4 block">The Core
+                of Intelligence</span>
+              <h2 class="text-5xl font-serif mb-6 leading-tight">Database <span class="italic">Management</span></h2>
+              <p class="text-on-surface-variant text-lg leading-relaxed">Data is your most valuable asset.
+                We architect high-performance, resilient storage solutions that balance consistency,
+                availability, and lightning-fast retrieval.</p>
+            </div>
+            <div class="space-y-6">
+              <div
+                class="flex gap-4 p-6 bg-white rounded-2xl shadow-sm border border-outline-variant/20 hover:border-primary/30 transition-colors">
+                <span class="material-symbols-outlined text-primary">storage</span>
+                <div>
+                  <h4 class="font-bold mb-1 text-sm">Relational (SQL)</h4>
+                  <p class="text-xs text-on-surface-variant">PostgreSQL and MySQL clusters tuned for
+                    ACID compliance and complex queries.</p>
+                </div>
+              </div>
+              <div
+                class="flex gap-4 p-6 bg-white rounded-2xl shadow-sm border border-outline-variant/20 hover:border-primary/30 transition-colors">
+                <span class="material-symbols-outlined text-primary">account_tree</span>
+                <div>
+                  <h4 class="font-bold mb-1 text-sm">Non-Relational (NoSQL)</h4>
+                  <p class="text-xs text-on-surface-variant">MongoDB, Redis, and Cassandra for massive
+                    horizontal scale and high-velocity data ingestion.</p>
+                </div>
+              </div>
+              <div
+                class="flex gap-4 p-6 bg-white rounded-2xl shadow-sm border border-outline-variant/20 hover:border-primary/30 transition-colors">
+                <span class="material-symbols-outlined text-primary">verified_user</span>
+                <div>
+                  <h4 class="font-bold mb-1 text-sm">Data Integrity</h4>
+                  <p class="text-xs text-on-surface-variant">Automated backups, point-in-time
+                    recovery, and encryption at rest/transit.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/2 relative">
+            <div
+              class="aspect-square bg-white rounded-3xl overflow-hidden border border-outline-variant/30 shadow-inner flex items-center justify-center p-12">
+              <div
+                class="relative w-full h-full border-2 border-dashed border-primary/20 rounded-full flex items-center justify-center">
+                <div
+                  class="w-3/4 h-3/4 border-2 border-solid border-primary/10 rounded-full flex items-center justify-center animate-[spin_20s_linear_infinite]">
+                  <div
+                    class="absolute top-0 w-8 h-8 bg-white border-2 border-primary rounded-full shadow-lg flex items-center justify-center">
+                    <span class="material-symbols-outlined text-xs text-primary font-bold">key</span>
+                  </div>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <div class="text-center">
+                    <div class="text-4xl font-headline font-bold text-primary mb-2">SCALABLE</div>
+                    <div class="text-[10px] uppercase font-bold tracking-[0.2em] text-on-surface-variant">
+                      Architecture</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary/5 blur-3xl rounded-full">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Detailed Section: Blockchain & Web3 -->
+    <section class="py-32 overflow-hidden mesh-bg" id="blockchain">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="mb-20 text-center max-w-3xl mx-auto">
+          <span class="text-primary font-bold tracking-widest uppercase text-xs mb-4 block">The Decentralized
+            Frontier</span>
+          <h2 class="text-5xl md:text-7xl font-serif mb-8">Blockchain &amp; <span class="italic">Web3</span>
+          </h2>
+          <p class="text-on-surface-variant text-xl font-light">Architecting the future of ownership and trust
+            through peer-to-peer protocols and cryptographic certainty.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Python Card -->
           <div
-            class="bg-white p-10 rounded-lg shadow-sm hover:shadow-xl transition-shadow duration-500 flex flex-col h-full">
-            <div class="w-12 h-12 rounded-full editorial-gradient flex items-center justify-center text-white mb-8">
-              <span class="material-symbols-outlined">data_object</span>
+            class="bg-white/80 backdrop-blur-md p-10 rounded-3xl border border-outline-variant/30 hover:border-primary/50 transition-all group">
+            <div
+              class="w-12 h-12 rounded-full editorial-gradient flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined">contract</span>
             </div>
-            <h3 class="text-2xl font-bold mb-4">Python &amp; FastAPI</h3>
-            <p class="text-on-surface-variant mb-8 flex-grow">High-performance APIs designed for machine learning
-              integration and rapid scalability.</p>
-            <div class="pt-6 border-t border-outline-variant/15 flex gap-2 flex-wrap">
-              <span class="px-3 py-1 bg-surface-container text-xs font-semibold rounded-full">AI Ready</span>
-              <span class="px-3 py-1 bg-surface-container text-xs font-semibold rounded-full">Asynchronous</span>
+            <h3 class="text-2xl font-bold mb-4 font-headline">Smart Contracts</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed mb-8">Audited, high-security logic
+              developed in Rust (Solana/Near) and Solidity (Ethereum/EVM).</p>
+            <div class="flex gap-2">
+              <span
+                class="text-[10px] font-bold py-1 px-3 bg-primary-container text-on-primary-container rounded-full">SOLANA</span>
+              <span
+                class="text-[10px] font-bold py-1 px-3 bg-primary-container text-on-primary-container rounded-full">EVM</span>
             </div>
           </div>
-          <!-- Node.js Card -->
           <div
-            class="bg-white p-10 rounded-lg shadow-sm hover:shadow-xl transition-shadow duration-500 flex flex-col h-full">
-            <div class="w-12 h-12 rounded-full editorial-gradient flex items-center justify-center text-white mb-8">
-              <span class="material-symbols-outlined">terminal</span>
+            class="bg-white/80 backdrop-blur-md p-10 rounded-3xl border border-outline-variant/30 hover:border-primary/50 transition-all group">
+            <div
+              class="w-12 h-12 rounded-full editorial-gradient flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined">hub</span>
             </div>
-            <h3 class="text-2xl font-bold mb-4">Node.js Ecosystem</h3>
-            <p class="text-on-surface-variant mb-8 flex-grow">Real-time applications built on NestJS or Express,
-              optimized for heavy I/O and low latency.</p>
-            <div class="pt-6 border-t border-outline-variant/15 flex gap-2 flex-wrap">
-              <span class="px-3 py-1 bg-surface-container text-xs font-semibold rounded-full">TypeScript</span>
-              <span class="px-3 py-1 bg-surface-container text-xs font-semibold rounded-full">Real-time</span>
+            <h3 class="text-2xl font-bold mb-4 font-headline">DApp Architecture</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed mb-8">End-to-end decentralized
+              applications with seamless wallet integration and intuitive UX.</p>
+            <div class="flex gap-2">
+              <span
+                class="text-[10px] font-bold py-1 px-3 bg-primary-container text-on-primary-container rounded-full">ETHERS.JS</span>
+              <span
+                class="text-[10px] font-bold py-1 px-3 bg-primary-container text-on-primary-container rounded-full">IPFS</span>
             </div>
           </div>
-          <!-- .NET Card -->
           <div
-            class="bg-white p-10 rounded-lg shadow-sm hover:shadow-xl transition-shadow duration-500 flex flex-col h-full">
-            <div class="w-12 h-12 rounded-full editorial-gradient flex items-center justify-center text-white mb-8">
-              <span class="material-symbols-outlined">settings_ethernet</span>
+            class="bg-white/80 backdrop-blur-md p-10 rounded-3xl border border-outline-variant/30 hover:border-primary/50 transition-all group">
+            <div
+              class="w-12 h-12 rounded-full editorial-gradient flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined">dns</span>
             </div>
-            <h3 class="text-2xl font-bold mb-4">C# / .NET</h3>
-            <p class="text-on-surface-variant mb-8 flex-grow">Enterprise-grade stability for complex business logic and
-              secure financial architectures.</p>
-            <div class="pt-6 border-t border-outline-variant/15 flex gap-2 flex-wrap">
-              <span class="px-3 py-1 bg-surface-container text-xs font-semibold rounded-full">Cloud Native</span>
-              <span class="px-3 py-1 bg-surface-container text-xs font-semibold rounded-full">Secured</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- DevOps Section -->
-      <div class="flex flex-col md:flex-row gap-16 items-center">
-        <div class="md:w-1/2 order-2 md:order-1">
-          <div class="grid grid-cols-2 gap-4">
-            <div class="glass-card p-8 rounded-lg">
-              <div class="text-primary font-bold text-4xl mb-2">99.9%</div>
-              <div class="text-sm font-semibold uppercase tracking-widest text-on-surface-variant">Uptime SLA</div>
-            </div>
-            <div class="glass-card p-8 rounded-lg mt-8">
-              <div class="text-primary font-bold text-4xl mb-2">&lt;1s</div>
-              <div class="text-sm font-semibold uppercase tracking-widest text-on-surface-variant">Deployment Velocity
-              </div>
-            </div>
-            <div class="glass-card p-8 rounded-lg">
-              <div class="text-primary font-bold text-4xl mb-2">Zero</div>
-              <div class="text-sm font-semibold uppercase tracking-widest text-on-surface-variant">Manual Config</div>
-            </div>
-            <div class="glass-card p-8 rounded-lg mt-8">
-              <div class="text-primary font-bold text-4xl mb-2">∞</div>
-              <div class="text-sm font-semibold uppercase tracking-widest text-on-surface-variant">Scalability</div>
+            <h3 class="text-2xl font-bold mb-4 font-headline">Custom Indexers</h3>
+            <p class="text-on-surface-variant text-sm leading-relaxed mb-8">High-speed RPC nodes and
+              specialized subgraphs for lightning-fast on-chain data retrieval.</p>
+            <div class="flex gap-2">
+              <span
+                class="text-[10px] font-bold py-1 px-3 bg-primary-container text-on-primary-container rounded-full">GRAPH
+                QL</span>
+              <span
+                class="text-[10px] font-bold py-1 px-3 bg-primary-container text-on-primary-container rounded-full">RUST</span>
             </div>
           </div>
-        </div>
-        <div class="md:w-1/2 order-1 md:order-2">
-          <h2 class="text-5xl font-serif mb-8">DevOps &amp; <span class="italic">Infrastructure</span></h2>
-          <p class="text-lg text-on-surface-variant mb-10 leading-relaxed">Infrastructure as code is not just a
-            practice; it's our promise of reliability. We automate the complexities of the cloud so you can focus on the
-            product.</p>
-          <ul class="space-y-6">
-            <li class="flex items-center gap-4 group">
-              <div
-                class="w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
-                <span class="material-symbols-outlined text-sm">rocket_launch</span>
-              </div>
-              <span class="font-medium text-lg">Kubernetes Orchestration</span>
-            </li>
-            <li class="flex items-center gap-4 group">
-              <div
-                class="w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
-                <span class="material-symbols-outlined text-sm">cloud_done</span>
-              </div>
-              <span class="font-medium text-lg">Terraform Infrastructure (IaC)</span>
-            </li>
-            <li class="flex items-center gap-4 group">
-              <div
-                class="w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
-                <span class="material-symbols-outlined text-sm">layers</span>
-              </div>
-              <span class="font-medium text-lg">Docker Containerization</span>
-            </li>
-          </ul>
         </div>
       </div>
     </section>
